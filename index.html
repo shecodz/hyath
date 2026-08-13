@@ -53,14 +53,22 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
 /* ---------- TYPOGRAPHY ---------- */
 .engrave{
   font-family:var(--font-display);font-weight:900;line-height:1.04;letter-spacing:.02em;
+  color:var(--gold-light);
   background:linear-gradient(180deg,#F7E9BE 0%,#EACB82 42%,#DFB96B 68%,#F0DB97 100%);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
+  -webkit-background-clip:text;background-clip:text;
   filter:drop-shadow(0 2px 2px rgba(0,0,0,.35)) drop-shadow(0 10px 26px rgba(0,0,0,.45));
+}
+@supports (-webkit-background-clip:text) or (background-clip:text){
+  .engrave{color:transparent}
 }
 .engrave-ink{
   font-family:var(--font-display);font-weight:800;line-height:1.04;
+  color:var(--emerald-deep);
   background:linear-gradient(180deg,#0F4A3D,#082C24);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
+  -webkit-background-clip:text;background-clip:text;
+}
+@supports (-webkit-background-clip:text) or (background-clip:text){
+  .engrave-ink{color:transparent}
 }
 .tamil{font-family:var(--font-tamil);font-weight:600}
 .ar{font-family:var(--font-ar);font-weight:700;direction:rtl}
@@ -253,7 +261,9 @@ section{position:relative}
 .invite .igold{position:absolute;inset:0;pointer-events:none;opacity:.4;background:radial-gradient(420px 220px at 50% 0%,rgba(200,163,90,.28),transparent 70%)}
 .invite .ar-big{font-family:var(--font-ar);font-size:clamp(40px,7vw,72px);color:var(--emerald);line-height:1}
 .invite h3{font-family:var(--font-display);font-weight:800;font-size:clamp(32px,5.5vw,56px);margin:12px 0 6px;line-height:1.05;
-  background:linear-gradient(180deg,#0F4A3D,#0A352B);-webkit-background-clip:text;background-clip:text;color:transparent}
+  color:var(--emerald-deep);background:linear-gradient(180deg,#0F4A3D,#0A352B);
+  -webkit-background-clip:text;background-clip:text}
+@supports (-webkit-background-clip:text) or (background-clip:text){.invite h3{color:transparent}}
 .invite .tam{font-family:var(--font-tamil);color:var(--gold-dark);font-size:16px;letter-spacing:.1em}
 .invite .gold-thin{max-width:240px;margin:20px auto}
 .invite .note{color:#51645C;max-width:52ch;margin:0 auto 8px;font-size:16px}
