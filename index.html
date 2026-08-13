@@ -12,11 +12,11 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%23C8A35A' stroke-width='4'%3E%3Cpath d='M50 6 L94 50 L50 94 L6 50 Z'/%3E%3Cpath d='M26 26 L74 26 L74 74 L26 74 Z'/%3E%3C/g%3E%3Ccircle cx='50' cy='50' r='5' fill='%23C8A35A'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Spectral:wght@300;400;500;600&family=Noto+Serif+Tamil:wght@400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Spectral:wght@400;500;600&family=Noto+Serif+Tamil:wght@400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --emerald:#0E4B3C; --emerald-deep:#0A352B; --emerald-glow:#15604D;
-  --pearl:#F6F1E4; --pearl-deep:#EDE3CB; --pearl-dim:#E2D6B9;
+  --pearl:#F6F1E4; --pearl-deep:#EDE3CB; --pearl-dim:#EFE6CE;
   --gold:#C8A35A; --gold-light:#E2C584; --gold-dark:#96783A;
   --henna:#D9802F; --ink:#0B2B26; --wa:#25D366;
   --font-display:'Marcellus',serif;
@@ -53,12 +53,14 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
 /* ---------- TYPOGRAPHY ---------- */
 .engrave{
   font-family:var(--font-display);font-weight:400;line-height:1.02;letter-spacing:.01em;
-  color:var(--gold-light);
-  text-shadow:0 1px 0 rgba(255,250,235,.12),0 -1px 1px rgba(0,0,0,.6),0 3px 6px rgba(0,0,0,.5),0 12px 32px rgba(0,0,0,.45);
+  background:linear-gradient(180deg,#F7E9BE 0%,#EACB82 42%,#DFB96B 68%,#F0DB97 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 2px 2px rgba(0,0,0,.35)) drop-shadow(0 10px 26px rgba(0,0,0,.45));
 }
 .engrave-ink{
-  font-family:var(--font-display);line-height:1.04;color:var(--emerald-deep);
-  text-shadow:0 1px 0 rgba(255,255,255,.55);
+  font-family:var(--font-display);line-height:1.04;
+  background:linear-gradient(180deg,#0F4A3D,#082C24);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
 }
 .tamil{font-family:var(--font-tamil);font-weight:600}
 .ar{font-family:var(--font-ar);font-weight:700;direction:rtl}
@@ -258,6 +260,8 @@ section{position:relative}
 .invite .book-facts{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:22px 0 26px}
 .invite .book-facts .chip{border-color:rgba(150,120,58,.5);color:var(--emerald-deep);background:rgba(200,163,90,.12)}
 .invite .book-cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+.invite .book-cta .btn.outline{color:var(--emerald-deep);border-color:rgba(150,120,58,.65);font-weight:600}
+.invite .book-cta .btn.outline:hover{background:rgba(200,163,90,.18)}
 
 /* ---------- REACH : MAP & HOURS ---------- */
 #reach{background:linear-gradient(180deg,var(--emerald),var(--emerald-deep))}
@@ -888,19 +892,31 @@ footer{background:var(--emerald-deep);border-top:1px solid rgba(200,163,90,.4)}
   }, { threshold: 0.6 });
   document.querySelectorAll('[data-count]').forEach(function(el){ nio.observe(el); });
 
-  /* today's label + open status */
-  var today = new Date();
+  /* today's label + live open/closed status */
   var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
   var tl = document.getElementById('todayLabel');
   var th = document.getElementById('todayHours');
-  if (tl) tl.textContent = 'Today (' + days[today.getDay()] + ')';
-  if (th) th.textContent = '10:30 am – 8:00 pm';
-  var hr = today.getHours();
-  var open = hr >= 10.5 && hr < 20;
   var st = document.querySelector('.status');
-  if (st && !open) {
-    st.innerHTML = '<span style="color:#f0b2a6">CLOSED · opens 10:30 am</span>';
+  var heroNote = document.querySelector('.hero-note');
+  function updateClock(){
+    var t = new Date();
+    if (tl) tl.textContent = 'Today (' + days[t.getDay()] + ')';
+    if (th) th.textContent = '10:30 am – 8:00 pm';
+    var mins = t.getHours() * 60 + t.getMinutes();
+    var open = mins >= 630 && mins < 1200; /* 10:30 am – 8:00 pm */
+    if (st) {
+      st.innerHTML = open
+        ? '<span class="live"></span> OPEN NOW'
+        : '<span style="color:#f0b2a6">CLOSED · opens 10:30 am</span>';
+    }
+    if (heroNote) {
+      heroNote.innerHTML = open
+        ? '<span class="live"></span> Open now · closes 8 pm · Broadway, Chennai'
+        : '<span class="live" style="background:#f2a393;animation:none"></span> Closed now · opens 10:30 am · Broadway, Chennai';
+    }
   }
+  updateClock();
+  setInterval(updateClock, 30000);
 
   /* hud thread */
   var thread = document.getElementById('hudThread');
