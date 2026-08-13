@@ -12,14 +12,14 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%23C8A35A' stroke-width='4'%3E%3Cpath d='M50 6 L94 50 L50 94 L6 50 Z'/%3E%3Cpath d='M26 26 L74 26 L74 74 L26 74 Z'/%3E%3C/g%3E%3Ccircle cx='50' cy='50' r='5' fill='%23C8A35A'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Spectral:wght@400;500;600&family=Noto+Serif+Tamil:wght@400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Spectral:wght@400;500;600&family=Noto+Serif+Tamil:wght@400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --emerald:#0E4B3C; --emerald-deep:#0A352B; --emerald-glow:#15604D;
   --pearl:#F6F1E4; --pearl-deep:#EDE3CB; --pearl-dim:#EFE6CE;
   --gold:#C8A35A; --gold-light:#E2C584; --gold-dark:#96783A;
   --henna:#D9802F; --ink:#0B2B26; --wa:#25D366;
-  --font-display:'Marcellus',serif;
+  --font-display:'Cinzel',serif;
   --font-italic:'Cormorant Garamond',serif;
   --font-body:'Spectral',serif;
   --font-tamil:'Noto Serif Tamil',serif;
@@ -52,13 +52,13 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
 
 /* ---------- TYPOGRAPHY ---------- */
 .engrave{
-  font-family:var(--font-display);font-weight:400;line-height:1.02;letter-spacing:.01em;
+  font-family:var(--font-display);font-weight:900;line-height:1.04;letter-spacing:.02em;
   background:linear-gradient(180deg,#F7E9BE 0%,#EACB82 42%,#DFB96B 68%,#F0DB97 100%);
   -webkit-background-clip:text;background-clip:text;color:transparent;
   filter:drop-shadow(0 2px 2px rgba(0,0,0,.35)) drop-shadow(0 10px 26px rgba(0,0,0,.45));
 }
 .engrave-ink{
-  font-family:var(--font-display);line-height:1.04;
+  font-family:var(--font-display);font-weight:800;line-height:1.04;
   background:linear-gradient(180deg,#0F4A3D,#082C24);
   -webkit-background-clip:text;background-clip:text;color:transparent;
 }
@@ -151,7 +151,7 @@ section{position:relative}
 .reveal.in{opacity:1;transform:none}
 .section-head{text-align:center;margin-bottom:clamp(40px,6vw,70px)}
 .section-head .eyebrow{justify-content:center}
-.section-head h3{font-size:clamp(34px,6vw,62px);margin:16px 0 12px}
+.section-head h3{font-size:clamp(40px,7vw,74px);margin:16px 0 12px}
 .section-head p{max-width:56ch;margin:0 auto;color:var(--pearl-dim)}
 
 /* ---------- HERO : THE COURTYARD ---------- */
@@ -165,7 +165,7 @@ section{position:relative}
 .hero-copy{position:relative;z-index:2}
 .hero-copy .ar-line{font-family:var(--font-ar);font-size:clamp(26px,3.6vw,34px);color:var(--gold-light);display:flex;align-items:center;gap:14px;margin-bottom:4px;opacity:.95}
 .hero-copy .ar-line::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,var(--gold),transparent)}
-.hero-copy h2{font-size:clamp(48px,9.5vw,112px);line-height:.96}
+.hero-copy h2{font-size:clamp(56px,11vw,132px);line-height:.98}
 .hero-copy .sub{font-size:clamp(16px,2vw,21px);color:var(--pearl-dim);margin:22px 0 8px;max-width:32ch;line-height:1.55}
 .hero-copy .sub em{color:var(--gold-light);font-style:normal}
 .hero-meta{margin-top:26px;display:flex;flex-wrap:wrap;gap:14px 26px;align-items:center}
@@ -252,7 +252,8 @@ section{position:relative}
 .invite::after{inset:16px;border:1px dashed rgba(150,120,58,.45)}
 .invite .igold{position:absolute;inset:0;pointer-events:none;opacity:.4;background:radial-gradient(420px 220px at 50% 0%,rgba(200,163,90,.28),transparent 70%)}
 .invite .ar-big{font-family:var(--font-ar);font-size:clamp(40px,7vw,72px);color:var(--emerald);line-height:1}
-.invite h3{font-family:var(--font-display);color:var(--emerald-deep);font-size:clamp(28px,5vw,48px);margin:12px 0 6px;line-height:1.05}
+.invite h3{font-family:var(--font-display);font-weight:800;font-size:clamp(32px,5.5vw,56px);margin:12px 0 6px;line-height:1.05;
+  background:linear-gradient(180deg,#0F4A3D,#0A352B);-webkit-background-clip:text;background-clip:text;color:transparent}
 .invite .tam{font-family:var(--font-tamil);color:var(--gold-dark);font-size:16px;letter-spacing:.1em}
 .invite .gold-thin{max-width:240px;margin:20px auto}
 .invite .note{color:#51645C;max-width:52ch;margin:0 auto 8px;font-size:16px}
@@ -687,7 +688,7 @@ footer{background:var(--emerald-deep);border-top:1px solid rgba(200,163,90,.4)}
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Book on WhatsApp
         </a>
-        <a class="btn outline" href="tel:+916379419270">Bookings +91 63794 19270</a>
+        <a class="btn gold" href="tel:+916379419270">Bookings +91 63794 19270</a>
       </div>
     </div>
   </div>
@@ -705,6 +706,7 @@ footer{background:var(--emerald-deep);border-top:1px solid rgba(200,163,90,.4)}
         <p style="font-size:13.5px;color:var(--pearl-dim);margin-top:4px">Most evenings are reserved ahead — send a WhatsApp for the day you have in mind.</p>
         <div class="hours-rows">
           <div class="hr"><b class="today" id="todayLabel">Today (Thursday)</b><span id="todayHours">10:30 am – 8:00 pm</span></div>
+          <div class="hr"><b>Chennai time</b><span id="ckNow">—</span></div>
           <div class="hr"><b>Closes</b><span>8:00 pm</span></div>
         </div>
         <div class="landmark"><b>In the old city:</b> on Prakasam Road in Broadway · a short walk from Mannadi metro &amp; Wallajah Road · minutes from Chennai Central.</div>
@@ -896,14 +898,23 @@ footer{background:var(--emerald-deep);border-top:1px solid rgba(200,163,90,.4)}
   var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
   var tl = document.getElementById('todayLabel');
   var th = document.getElementById('todayHours');
+  var ck = document.getElementById('ckNow');
   var st = document.querySelector('.status');
   var heroNote = document.querySelector('.hero-note');
+  function ist(){
+    var parts = Object.fromEntries(new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Kolkata', weekday: 'long', hour: '2-digit', minute: '2-digit', hour12: false }).formatToParts(new Date()).map(function(p){ return [p.type, p.value]; }));
+    var hh = parseInt(parts.hour, 10) % 24, mm = parseInt(parts.minute, 10);
+    return { day: parts.weekday, mins: hh * 60 + mm, label: ('0'+hh).slice(-2) + ':' + ('0'+mm).slice(-2) };
+  }
   function updateClock(){
-    var t = new Date();
-    if (tl) tl.textContent = 'Today (' + days[t.getDay()] + ')';
+    var t = ist();
+    if (tl) tl.textContent = 'Today (' + t.day + ')';
     if (th) th.textContent = '10:30 am – 8:00 pm';
-    var mins = t.getHours() * 60 + t.getMinutes();
-    var open = mins >= 630 && mins < 1200; /* 10:30 am – 8:00 pm */
+    var open = t.mins >= 630 && t.mins < 1200; /* 10:30 am – 8:00 pm */
+    var dm = open ? (1200 - t.mins) : (630 >= t.mins ? (630 - t.mins) : (1440 - t.mins + 630));
+    var dh = Math.floor(dm / 60), dmm = dm % 60;
+    var rd = open ? 'closes in ' + dh + 'h ' + (dmm < 10 ? '0' : '') + dmm + 'm' : 'opens in ' + dh + 'h ' + dmm + 'm';
+    if (ck) ck.textContent = t.label + ' IST · ' + (open ? 'open' : 'closed') + ' · ' + rd;
     if (st) {
       st.innerHTML = open
         ? '<span class="live"></span> OPEN NOW'
@@ -911,12 +922,12 @@ footer{background:var(--emerald-deep);border-top:1px solid rgba(200,163,90,.4)}
     }
     if (heroNote) {
       heroNote.innerHTML = open
-        ? '<span class="live"></span> Open now · closes 8 pm · Broadway, Chennai'
-        : '<span class="live" style="background:#f2a393;animation:none"></span> Closed now · opens 10:30 am · Broadway, Chennai';
+        ? '<span class="live"></span> Open now · ' + rd + ' · Broadway, Chennai'
+        : '<span class="live" style="background:#f2a393;animation:none"></span> Closed now · ' + rd + ' · Broadway, Chennai';
     }
   }
   updateClock();
-  setInterval(updateClock, 30000);
+  setInterval(updateClock, 10000);
 
   /* hud thread */
   var thread = document.getElementById('hudThread');
