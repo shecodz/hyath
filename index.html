@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Hyath Mahal — Wedding &amp; Banquet Hall · Broadway, Chennai</title>
+<meta name="description" content="Hyath Mahal, Broadway Chennai — 4.5★ banquet hall, 20,000 sq ft, 4 floors, AC, 100–1200 guests. Wedding, reception, engagement & parties. WhatsApp: +91 78457 19696.">
+<meta name="theme-color" content="#F6EFDF">
+<meta property="og:title" content="Hyath Mahal — The Golden Guest">
+<meta property="og:description" content="4.5★ · Banquet hall · 196 Prakasam Road, Broadway, Chennai 600108 · Weddings, receptions, engagements, parties">
+<meta property="og:image" content="img/1.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 6 L84 30 V80 L50 94 L16 80 V30 Z' fill='none' stroke='%23D4AF37' stroke-width='5'/%3E%3Cpath d='M50 22 L72 38 V70 L50 82 L28 70 V38 Z' fill='%235E1224'/%3E%3Ccircle cx='50' cy='50' r='6' fill='%23D4AF37'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivory:#F6EFDF; --ivory-deep:#EDE3CB; --ivory-dim:#E2D5B6;
+  --gold:#D4AF37; --gold-light:#E8CD6E; --gold-dark:#A8842C;
+  --maroon:#5E1224; --maroon-deep:#43091A;
+  --ink:#1F2A4A; --sapphire:#1F2A4A; --sapphire-deep:#141C36;
+  --emerald:#147A57;
+  --font-display:'Cinzel',serif;
+  --font-body:'EB Garamond',serif;
+  --font-tamil:'Noto Serif Tamil',serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:16px}
+body{background:var(--ivory);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--gold);color:var(--maroon-deep)}
+::-webkit-scrollbar{width:11px}
+::-webkit-scrollbar-track{background:var(--ivory-deep)}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--gold),var(--gold-dark));border-radius:8px;border:2px solid var(--ivory-deep)}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
+
+/* ---------- GATE LOADER ---------- */
+#gate{position:fixed;inset:0;z-index:9999;background:var(--ivory);display:grid;place-items:center;perspective:1400px;transition:opacity .8s ease .15s,visibility .8s ease .15s}
+#gate.done{opacity:0;visibility:hidden}
+#gate .panel{position:absolute;top:0;bottom:0;width:50.5%;background:
+  linear-gradient(160deg,var(--maroon) 0%,var(--maroon-deep) 70%),repeating-linear-gradient(90deg,rgba(212,175,55,.08) 0 2px,transparent 2px 22px);background-blend-mode:overlay;transition:transform 1.15s cubic-bezier(.7,0,.25,1)}
+#gate .panel.l{left:0;transform-origin:left center;border-right:1px solid rgba(212,175,55,.5)}
+#gate .panel.r{right:0;transform-origin:right center;border-left:1px solid rgba(212,175,55,.5)}
+#gate.done .panel.l{transform:rotateY(112deg)}
+#gate.done .panel.r{transform:rotateY(-112deg)}
+#gate .seal{position:relative;z-index:2;text-align:center;transition:opacity .5s ease .1s}
+#gate.done .seal{opacity:0}
+#gate .seal .gate-arch{width:120px;height:120px;margin:0 auto;color:var(--gold);filter:drop-shadow(0 10px 30px rgba(94,18,36,.35))}
+#gate .seal .invite{margin-top:18px;font-size:12px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold-dark);font-family:var(--font-body);font-style:italic}
+#gate .seal .nm{font-family:var(--font-display);font-weight:800;font-size:clamp(26px,5vw,40px);color:var(--maroon);letter-spacing:.08em;margin-top:4px}
+#gate .seal .tm{font-family:var(--font-tamil);font-size:15px;color:var(--gold-dark);letter-spacing:.2em;margin-top:4px}
+
+/* ---------- CURSOR ---------- */
+#ring{position:fixed;top:0;left:0;width:36px;height:36px;margin:-18px 0 0 -18px;border:1px solid rgba(168,132,44,.9);border-radius:50%;pointer-events:none;z-index:9998;transition:width .25s,height .25s,margin .25s,background .25s,border-color .25s;transform:translate(0,0)}
+#dot{position:fixed;top:0;left:0;width:5px;height:5px;margin:-2.5px 0 0 -2.5px;border-radius:50%;background:var(--gold-dark);pointer-events:none;z-index:9998}
+@media (pointer:fine){ body{cursor:none} body *{cursor:none!important} }
+body.hovering #ring{width:62px;height:62px;margin:-31px 0 0 -31px;border-color:var(--emerald);background:rgba(20,122,87,.1)}
+
+/* ---------- HEADER ---------- */
+.hd{position:sticky;top:0;z-index:900;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px clamp(16px,4vw,44px);background:rgba(246,239,223,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(168,132,44,.35)}
+.hd .brand{display:flex;align-items:center;gap:12px}
+.hd .brand svg{width:38px;height:38px;flex:none}
+.hd .brand .nm{font-family:var(--font-display);font-weight:700;font-size:clamp(15px,2vw,19px);letter-spacing:.06em;color:var(--maroon);line-height:1}
+.hd .brand .tm{font-family:var(--font-tamil);font-size:12px;color:var(--gold-dark);letter-spacing:.12em}
+.hd nav{display:flex;gap:24px;font-size:15px}
+.hd nav a{color:var(--ink);text-decoration:none;position:relative;padding:3px 0;transition:color .2s}
+.hd nav a:hover{color:var(--maroon)}
+.hd nav a::after{content:"";position:absolute;left:0;bottom:-2px;height:1px;width:0;background:var(--gold);transition:width .35s}
+.hd nav a:hover::after{width:100%}
+.hd .cta{display:flex;align-items:center;gap:12px}
+
+/* ---------- BUTTONS ---------- */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 26px;border-radius:3px;text-decoration:none;font-family:var(--font-display);font-weight:700;letter-spacing:.05em;font-size:14.5px;transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden}
+.btn svg{width:18px;height:18px;flex:none}
+.btn.gold{background:linear-gradient(135deg,var(--gold-light),var(--gold) 55%,var(--gold-dark));color:#3c2a05;box-shadow:0 10px 26px rgba(212,175,55,.4)}
+.btn.gold:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(212,175,55,.55)}
+.btn.wa{background:linear-gradient(135deg,#1faa55,#25D366);color:#03210f;box-shadow:0 10px 26px rgba(37,211,102,.35)}
+.btn.wa:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(37,211,102,.5)}
+.btn.ghost{border:1px solid var(--gold-dark);color:var(--maroon)}
+.btn.ghost:hover{background:rgba(212,175,55,.12)}
+.btn.lite{border:1px solid rgba(232,205,110,.6);color:var(--gold-light)}
+.btn.lite:hover{background:rgba(212,175,55,.15)}
+
+/* ---------- LAYOUT ---------- */
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(18px,4vw,44px);position:relative}
+section{position:relative}
+.pad{padding:clamp(70px,10vw,130px) 0}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.eyebrow{display:flex;align-items:center;gap:14px;font-size:12.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-dark);font-style:italic}
+.eyebrow::before,.eyebrow::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,transparent,var(--gold));}
+.eyebrow::after{background:linear-gradient(90deg,var(--gold),transparent)}
+.section-head{text-align:center;margin-bottom:clamp(38px,6vw,64px)}
+.section-head .eyebrow{justify-content:center}
+.section-head .eyebrow::before{flex:0 0 60px}
+.section-head .eyebrow::after{flex:0 0 60px}
+.section-head h3{font-family:var(--font-display);font-weight:800;font-size:clamp(30px,5.4vw,54px);color:var(--maroon);letter-spacing:.02em;margin:14px 0 10px;line-height:1.05}
+.section-head p{max-width:58ch;margin:0 auto;color:#5a647f}
+
+/* ---------- HERO / MASTHEAD ---------- */
+#top{padding:clamp(54px,8vw,110px) 0 clamp(40px,6vw,70px);overflow:hidden;background:
+  radial-gradient(900px 420px at 85% -10%,rgba(212,175,55,.16),transparent 60%),
+  radial-gradient(700px 380px at 0% 110%,rgba(94,18,36,.07),transparent 55%),var(--ivory)}
+.filigree{position:absolute;width:130px;height:130px;opacity:.5;color:var(--gold);pointer-events:none}
+.filigree.tl{top:18px;left:16px}
+.filigree.br{bottom:18px;right:16px;transform:rotate(180deg)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(30px,5vw,64px);align-items:center}
+.hero-copy .invite{font-style:italic;font-size:clamp(15px,2vw,19px);color:var(--gold-dark);letter-spacing:.04em}
+.hero-copy h1{font-family:var(--font-display);font-weight:900;font-size:clamp(46px,9vw,104px);line-height:.98;letter-spacing:.02em;color:var(--maroon);margin:14px 0 2px;text-shadow:0 2px 0 rgba(255,255,255,.6)}
+.hero-copy .tamil{font-family:var(--font-tamil);font-weight:600;font-size:clamp(20px,3vw,30px);color:var(--gold-dark);letter-spacing:.12em}
+.hero-copy .tag{font-size:clamp(17px,2.2vw,22px);color:#5a647f;margin:18px 0 4px;max-width:34ch;font-style:italic}
+.hero-copy .tag b{color:var(--maroon);font-weight:600}
+.hero-rating{display:flex;align-items:center;gap:12px;margin-top:20px;flex-wrap:wrap}
+.hero-rating .st{color:var(--gold);letter-spacing:2px;font-size:18px}
+.hero-rating b{font-family:var(--font-display);font-size:26px;color:var(--maroon)}
+.hero-rating span{font-size:13.5px;color:#5a647f;letter-spacing:.03em}
+.hero-facts{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.fact{font-family:var(--font-display);font-size:12.5px;letter-spacing:.06em;color:var(--maroon);border:1px solid rgba(168,132,44,.5);padding:7px 14px;border-radius:999px;background:rgba(212,175,55,.08)}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.hero-note{display:flex;align-items:center;gap:9px;margin-top:20px;font-size:14px;color:#5a647f}
+.hero-note .dot{width:9px;height:9px;border-radius:50%;background:var(--emerald);box-shadow:0 0 0 0 rgba(20,122,87,.55);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(20,122,87,0)}100%{box-shadow:0 0 0 0 rgba(20,122,87,0)}}
+
+/* hero arch frame */
+.hero-frame{display:flex;justify-content:center}
+.arch{position:relative;width:min(380px,82vw)}
+.arch .arch-in{position:relative;overflow:hidden;border:2px solid var(--gold);border-bottom:6px solid var(--gold);background:var(--gold-dark);
+  border-radius:190px 190px 8px 8px / 210px 210px 8px 8px;box-shadow:0 24px 60px rgba(94,18,36,.28)}
+.arch .arch-in img{width:100%;height:min(460px,58vh);object-fit:cover;border-radius:190px 190px 0 0 / 210px 210px 0 0;transition:transform 1.4s ease}
+.arch:hover .arch-in img{transform:scale(1.06)}
+.arch .finial{position:absolute;top:-34px;left:50%;transform:translateX(-50%);width:54px;height:54px;color:var(--gold);filter:drop-shadow(0 6px 14px rgba(212,175,55,.5));z-index:2}
+.arch .cap{text-align:center;margin-top:12px;font-family:var(--font-display);font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-dark)}
+.sheen{position:relative;overflow:hidden}
+.sheen::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 32%,rgba(255,248,224,.4) 45%,rgba(255,248,224,.85) 50%,rgba(255,248,224,.4) 55%,transparent 68%);transform:translateX(-140%);transition:transform 1s ease;pointer-events:none}
+.sheen:hover::after{transform:translateX(140%)}
+/* red carpet */
+.carpet{height:10px;background:repeating-linear-gradient(90deg,var(--maroon) 0 30px,#7a1e34 30px 32px,var(--maroon) 32px 60px);border-top:2px solid var(--gold);border-bottom:2px solid var(--gold);opacity:.9}
+.carpet .edge{position:absolute;top:-2px;left:50%;transform:translateX(-50%);width:120px;height:6px;background:var(--gold);border-radius:0 0 6px 6px}
+
+/* ---------- THE COURTS (halls) ---------- */
+#courts{background:var(--ivory)}
+.courts{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:clamp(22px,3.4vw,34px);align-items:start}
+.court{text-align:center;position:relative;transition:transform .35s}
+.court:hover{transform:translateY(-8px)}
+.court .co-arch{position:relative;overflow:hidden;border:2px solid var(--gold);border-bottom:5px solid var(--gold);border-radius:110px 110px 6px 6px / 120px 120px 6px 6px;box-shadow:0 16px 44px rgba(94,18,36,.18);background:var(--gold-dark)}
+.court .co-arch img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:108px 108px 0 0 / 118px 118px 0 0;transition:transform .9s ease}
+.court:hover .co-arch img{transform:scale(1.05)}
+.court .fin{position:absolute;top:-20px;left:50%;transform:translateX(-50%);width:34px;height:34px;color:var(--gold);filter:drop-shadow(0 4px 8px rgba(212,175,55,.4))}
+.court h4{font-family:var(--font-display);font-weight:800;font-size:20px;letter-spacing:.14em;color:var(--maroon);margin-top:22px;text-transform:uppercase}
+.court .tm{font-family:var(--font-tamil);font-size:12px;color:var(--gold-dark);letter-spacing:.1em;margin-top:3px}
+.court .cap{margin-top:7px;font-size:13.5px;color:#5a647f;font-style:italic}
+
+/* ---------- THE FEAST (facilities) — sapphire dusk ---------- */
+#feast{background:radial-gradient(1000px 460px at 15% -10%,#2b3a63 0%,var(--sapphire) 55%,var(--sapphire-deep) 100%)}
+#feast .section-head h3{color:var(--ivory)}
+#feast .section-head p{color:#aeb6cd}
+#feast .eyebrow{color:var(--gold-light)}
+.feast-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(30px,5vw,64px);align-items:center}
+.menu{display:grid;gap:2px;background:rgba(212,175,55,.35);border:1px solid rgba(212,175,55,.35)}
+.menu .row{background:linear-gradient(180deg,#24304f,#1c2440);display:flex;gap:16px;align-items:flex-start;padding:16px 18px;transition:background .25s}
+.menu .row:hover{background:#2a3658}
+.menu .row .ic{width:22px;height:22px;flex:none;color:var(--gold-light);margin-top:2px}
+.menu .row h5{font-family:var(--font-display);font-weight:700;font-size:15.5px;letter-spacing:.04em;color:var(--ivory)}
+.menu .row p{font-size:14px;color:#aeb6cd;margin-top:2px}
+.feat-side{position:relative}
+.feat-side h4{font-family:var(--font-display);font-weight:800;font-size:clamp(26px,4.4vw,44px);color:var(--gold-light);line-height:1.1;margin-bottom:16px}
+.feat-side p{color:#aeb6cd;max-width:44ch;margin-bottom:16px}
+.events{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:22px}
+.events span{font-size:13px;letter-spacing:.04em;color:var(--ivory);border:1px solid rgba(232,205,110,.4);padding:6px 13px;border-radius:999px;background:rgba(212,175,55,.1)}
+.feat-img{position:relative;display:inline-block}
+.feat-img img{width:min(340px,80%);border:2px solid var(--gold);padding:8px;background:rgba(212,175,55,.1);box-shadow:0 18px 44px rgba(0,0,0,.4);margin-top:10px}
+.feat-img .lbl{position:absolute;left:14px;bottom:14px;font-family:var(--font-display);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-light);background:rgba(20,28,54,.85);padding:5px 12px;border:1px solid rgba(212,175,55,.5)}
+
+/* ---------- THE GALLERIES ---------- */
+#gallery{background:var(--ivory)}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gal .g{position:relative;overflow:hidden;border:1px solid rgba(168,132,44,.45);box-shadow:0 10px 26px rgba(94,18,36,.12)}
+.gal .g img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .8s ease}
+.gal .g:hover img{transform:scale(1.06)}
+.gal .g::after{content:"";position:absolute;inset:0;border:1px solid rgba(212,175,55,.5);opacity:0;transition:opacity .3s}
+.gal .g:hover::after{opacity:1}
+
+/* ---------- THE LEDGER (booking) ---------- */
+#ledger{background:linear-gradient(180deg,var(--ivory),var(--ivory-deep))}
+.ledger-card{position:relative;max-width:880px;margin:0 auto;background:var(--ivory);border:1px solid var(--gold);box-shadow:0 30px 70px rgba(94,18,36,.22);padding:clamp(32px,6vw,60px);text-align:center;border-radius:4px;overflow:hidden}
+.ledger-card::before,.ledger-card::after{content:"";position:absolute;width:70px;height:70px;border:2px solid var(--gold);opacity:.6;pointer-events:none}
+.ledger-card::before{top:14px;left:14px;border-right:none;border-bottom:none}
+.ledger-card::after{bottom:14px;right:14px;border-left:none;border-top:none}
+.ledger-card .eyebrow{justify-content:center}
+.ledger-card .eyebrow::before,.ledger-card .eyebrow::after{flex:0 0 60px}
+.ledger-card h3{font-family:var(--font-display);font-weight:900;font-size:clamp(28px,5vw,48px);color:var(--maroon);margin:16px 0 8px;line-height:1.05}
+.ledger-card .sub{font-style:italic;font-size:17px;color:#5a647f;max-width:52ch;margin:0 auto 26px}
+.ledger-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.ledger-rows{display:flex;justify-content:center;gap:clamp(18px,4vw,50px);flex-wrap:wrap;margin-top:30px;padding-top:26px;border-top:1px dashed var(--gold-dark)}
+.ledger-rows .r{text-align:center;min-width:150px}
+.ledger-rows .r b{display:block;font-family:var(--font-display);font-weight:700;font-size:17px;color:var(--maroon);margin-bottom:4px}
+.ledger-rows .r span{font-size:14px;color:#5a647f}
+.ledger-rows .r a{color:var(--maroon);text-decoration:none;border-bottom:1px dashed var(--gold-dark)}
+
+/* ---------- THE GUEST LIST ---------- */
+#guests{background:var(--ivory)}
+.guest-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(22px,3.4vw,36px)}
+.gcard{background:var(--ivory);border:1px solid rgba(168,132,44,.4);padding:clamp(26px,3.4vw,38px);position:relative;box-shadow:0 14px 34px rgba(94,18,36,.12)}
+.gcard::before{content:"\201C";position:absolute;top:6px;left:18px;font-family:var(--font-display);font-size:64px;color:var(--gold);line-height:1}
+.gcard p{font-size:clamp(16px,2vw,19px);font-style:italic;line-height:1.55;color:#3a435c}
+.gcard .who{margin-top:18px;display:flex;align-items:center;gap:10px}
+.gcard .who b{font-family:var(--font-display);font-weight:700;font-size:14px;letter-spacing:.06em;color:var(--maroon)}
+.gcard .who span{font-size:13px;color:#8a6f3f}
+.gcard .stars{color:var(--gold);letter-spacing:2px;font-size:15px;margin-top:12px}
+.rating-note{text-align:center;margin-top:clamp(30px,5vw,50px);font-style:italic;color:#5a647f}
+.rating-note b{font-family:var(--font-display);color:var(--maroon)}
+
+/* ---------- THE WAY (map + landmarks) ---------- */
+#way{background:linear-gradient(180deg,var(--ivory),var(--ivory-deep))}
+.way-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,5vw,60px);align-items:center}
+.way-side h3{font-family:var(--font-display);font-weight:800;font-size:clamp(28px,4.6vw,46px);color:var(--maroon);margin:12px 0 14px;line-height:1.05}
+.way-side p{color:#5a647f;max-width:46ch;margin-bottom:20px}
+.way-side address{font-style:normal;font-size:15.5px;color:#3a435c;margin-bottom:20px;line-height:1.6}
+.landmarks{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.landmarks li{list-style:none;display:flex;align-items:center;gap:9px;font-size:14.5px;color:#3a435c;background:rgba(212,175,55,.1);border:1px solid rgba(168,132,44,.35);padding:9px 13px;border-radius:999px}
+.landmarks li svg{width:15px;height:15px;flex:none;color:var(--gold-dark)}
+.mapwrap{border:1px solid var(--gold);padding:9px;background:linear-gradient(135deg,rgba(212,175,55,.14),rgba(168,132,44,.06));box-shadow:0 18px 46px rgba(94,18,36,.2)}
+.mapwrap iframe{width:100%;height:330px;border:0;display:block;filter:sepia(.12) saturate(.95)}
+.mapcap{display:flex;justify-content:space-between;gap:12px;margin-top:10px;font-size:13.5px;color:#5a647f;flex-wrap:wrap}
+.mapcap a{color:var(--maroon);border-bottom:1px dashed var(--gold-dark);text-decoration:none}
+
+/* ---------- FOOTER ---------- */
+footer{background:linear-gradient(160deg,var(--maroon),var(--maroon-deep));color:#f2ead4}
+.foot{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:clamp(24px,4vw,50px);padding:clamp(40px,6vw,64px) 0}
+.foot h4{font-family:var(--font-display);font-weight:700;font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-light);margin-bottom:14px}
+.foot p,.foot li{font-size:14.5px;color:#e8ddc0;list-style:none;line-height:1.7}
+.foot ul{display:grid;gap:7px}
+.foot a{text-decoration:none;color:#e8ddc0;transition:.2s}
+.foot a:hover{color:var(--gold-light)}
+.foot .nm{font-family:var(--font-display);font-weight:800;font-size:22px;color:var(--gold-light);letter-spacing:.05em}
+.foot .tm{font-family:var(--font-tamil);font-size:13px;color:var(--gold);letter-spacing:.14em}
+.socials{display:flex;gap:10px;margin-top:14px}
+.socials a{width:36px;height:36px;display:grid;place-items:center;border:1px solid rgba(212,175,55,.5);border-radius:50%;transition:.25s}
+.socials a:hover{background:var(--gold);color:var(--maroon-deep);border-color:var(--gold)}
+.socials svg{width:16px;height:16px}
+.foot-bottom{border-top:1px dashed rgba(212,175,55,.35);padding:18px 0;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:13px;color:#cbbf9e}
+
+/* ---------- WA FLOAT ---------- */
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:950;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#1faa55,#25D366);color:#03210f;box-shadow:0 12px 32px rgba(0,0,0,.35),0 0 0 4px rgba(37,211,102,.25);transition:transform .3s}
+.wa-float:hover{transform:scale(1.1) rotate(-6deg)}
+.wa-float svg{width:28px;height:28px}
+.wa-float .ring{position:absolute;inset:-9px;border:1px solid #25D366;border-radius:50%;opacity:0;animation:floatring 2.4s infinite}
+@keyframes floatring{0%{transform:scale(.8);opacity:.8}100%{transform:scale(1.5);opacity:0}}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:960px){
+  .hero-grid,.feast-grid,.way-grid{grid-template-columns:1fr}
+  .hd nav{display:none}
+  .gal{grid-template-columns:repeat(2,1fr)}
+  .foot{grid-template-columns:1fr}
+  .landmarks{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .gal{grid-template-columns:1fr}
+  .hero-cta .btn{flex:1;justify-content:center}
+  .courts{grid-template-columns:repeat(2,1fr)}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001s!important;transition-duration:.001s!important}
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- GATE LOADER -->
+<div id="gate" aria-hidden="true">
+  <div class="panel l"></div>
+  <div class="panel r"></div>
+  <div class="seal">
+    <svg class="gate-arch" viewBox="0 0 120 120">
+      <path d="M18 116 V58 L60 10 L102 58 V116" fill="none" stroke="#D4AF37" stroke-width="3"/>
+      <path d="M34 116 V62 L60 28 L86 62 V116" fill="none" stroke="#5E1224" stroke-width="2"/>
+      <circle cx="60" cy="24" r="4" fill="#D4AF37"/>
+      <path d="M48 116 V52 M72 116 V52" stroke="#A8842C" stroke-width="1.5" stroke-dasharray="2 4"/>
+    </svg>
+    <div class="invite">You are invited to celebrate at</div>
+    <div class="nm">HYATH MAHAL</div>
+    <div class="tm">ஹயாத் மகால்</div>
+  </div>
+</div>
+
+<!-- CURSOR -->
+<div id="ring" aria-hidden="true"></div>
+<div id="dot" aria-hidden="true"></div>
+
+<!-- WHATSAPP FLOAT -->
+<a class="wa-float" href="https://wa.me/917845719696?text=Namaste%20Hyath%20Mahal!%20I%20would%20like%20to%20enquire%20about%20booking%20your%20hall%20for%20a%20function." target="_blank" rel="noopener" aria-label="Enquire on WhatsApp">
+  <span class="ring"></span>
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- HEADER -->
+<header class="hd">
+  <div class="brand">
+    <svg viewBox="0 0 100 100" aria-hidden="true">
+      <path d="M50 4 L88 32 V82 L50 96 L12 82 V32 Z" fill="none" stroke="#D4AF37" stroke-width="4"/>
+      <path d="M50 22 L74 38 V72 L50 86 L26 72 V38 Z" fill="#5E1224"/>
+      <path d="M50 34 L62 42 V62 L50 70 L38 62 V42 Z" fill="#D4AF37"/>
+    </svg>
+    <div>
+      <div class="nm">HYATH MAHAL</div>
+      <div class="tm">ஹயாத் மகால் · Broadway</div>
+    </div>
+  </div>
+  <nav aria-label="Sections">
+    <a href="#courts">The Courts</a>
+    <a href="#feast">Facilities</a>
+    <a href="#ledger">Book</a>
+    <a href="#way">Reach us</a>
+  </nav>
+  <div class="cta">
+    <a class="btn gold" href="https://wa.me/917845719696?text=Namaste%20Hyath%20Mahal!%20I%20would%20like%20to%20book%20your%20hall%20for%20a%20function." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Book now
+    </a>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ MASTHEAD ============ -->
+<section id="top">
+  <svg class="filigree tl" viewBox="0 0 120 120" aria-hidden="true"><use href="#corner"/></svg>
+  <svg class="filigree br" viewBox="0 0 120 120" aria-hidden="true"><use href="#corner"/></svg>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy reveal">
+        <div class="invite">You are invited to celebrate at</div>
+        <h1>HYATH<br>MAHAL</h1>
+        <div class="tamil">ஹயாத் மகால்</div>
+        <p class="tag">Chennai's <b>grand four-storey banquet hall</b> — 20,000 sq ft of air-conditioned palace in the middle of Broadway.</p>
+        <div class="hero-rating">
+          <span class="st" aria-hidden="true">★★★★★</span>
+          <b data-count="4.5" data-dec="1">4.5</b>
+          <span>rated on Google · LGBTQ+ friendly</span>
+        </div>
+        <div class="hero-facts">
+          <span class="fact" data-count="20000">0</span> sq ft
+          <span class="fact">4 floors · AC</span>
+          <span class="fact">100–1200 guests</span>
+          <span class="fact">5 halls</span>
+        </div>
+        <div class="hero-cta">
+          <a class="btn gold" href="https://wa.me/917845719696?text=Namaste%20Hyath%20Mahal!%20I%20would%20like%20to%20enquire%20about%20booking%20your%20hall%20for%20a%20function." target="_blank" rel="noopener">Book the hall</a>
+          <a class="btn ghost" href="tel:+917845719696">Call +91 78457 19696</a>
+        </div>
+        <div class="hero-note"><span class="dot"></span> Open now · Closes 8 pm · 196 Prakasam Road, Broadway</div>
+      </div>
+      <div class="hero-frame reveal">
+        <div class="arch">
+          <svg class="finial" viewBox="0 0 54 54" aria-hidden="true"><use href="#finial"/></svg>
+          <div class="arch-in sheen">
+            <img src="img/1.jpg" alt="Hyath Mahal banquet hall, Broadway Chennai" loading="eager">
+          </div>
+          <div class="cap">— the golden gate of Broadway —</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="carpet"><span class="edge"></span></div>
+</section>
+
+<!-- ============ THE COURTS (halls) ============ -->
+<section id="courts" class="pad">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">The Courts</span>
+      <h3>Five halls under one roof</h3>
+      <p>Studio, Vivaha, Ballroom, The Royal Palace and the Deck — each a room for a different kind of celebration, from 100 to 1,200 guests.</p>
+    </div>
+    <div class="courts">
+      <div class="court reveal">
+        <div class="co-arch sheen">
+          <svg class="fin" viewBox="0 0 34 34" aria-hidden="true"><use href="#finial"/></svg>
+          <img src="img/g01.jpg" alt="Studio hall at Hyath Mahal" loading="lazy">
+        </div>
+        <h4>Studio</h4>
+        <div class="tm">ஸ்டுடியோ</div>
+        <p class="cap">intimate functions, small gatherings</p>
+      </div>
+      <div class="court reveal">
+        <div class="co-arch sheen">
+          <svg class="fin" viewBox="0 0 34 34" aria-hidden="true"><use href="#finial"/></svg>
+          <img src="img/g02.jpg" alt="Vivaha wedding hall" loading="lazy">
+        </div>
+        <h4>Vivaha</h4>
+        <div class="tm">விவாஹா</div>
+        <p class="cap">the wedding hall, made for marriage</p>
+      </div>
+      <div class="court reveal">
+        <div class="co-arch sheen">
+          <svg class="fin" viewBox="0 0 34 34" aria-hidden="true"><use href="#finial"/></svg>
+          <img src="img/g03.jpg" alt="Ballroom at Hyath Mahal" loading="lazy">
+        </div>
+        <h4>Ballroom</h4>
+        <div class="tm">பால்ரூம்</div>
+        <p class="cap">receptions, receptions, receptions</p>
+      </div>
+      <div class="court reveal">
+        <div class="co-arch sheen">
+          <svg class="fin" viewBox="0 0 34 34" aria-hidden="true"><use href="#finial"/></svg>
+          <img src="img/g04.jpg" alt="The Royal Palace hall" loading="lazy">
+        </div>
+        <h4>The Royal Palace</h4>
+        <div class="tm">தி ராயல் பேலஸ்</div>
+        <p class="cap">grand occasions, up to 1,200 guests</p>
+      </div>
+      <div class="court reveal">
+        <div class="co-arch sheen">
+          <svg class="fin" viewBox="0 0 34 34" aria-hidden="true"><use href="#finial"/></svg>
+          <img src="img/g05.jpg" alt="The Deck at Hyath Mahal" loading="lazy">
+        </div>
+        <h4>The Deck</h4>
+        <div class="tm">தி டெக்</div>
+        <p class="cap">open-air, evening and starry nights</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE FEAST (facilities) ============ -->
+<section id="feast" class="pad">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">The Feast</span>
+      <h3>The banquet, prepared for you</h3>
+      <p>Everything is arranged for — you bring the celebration.</p>
+    </div>
+    <div class="feast-grid">
+      <div class="menu reveal">
+        <div class="row">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16v10H4z" stroke-linejoin="round"/><path d="M8 7V5a4 4 0 0 1 8 0v2"/></svg>
+          <div><h5>Choose your own caterer</h5><p>Vegetarian or non-vegetarian, whoever cooks best for your family.</p></div>
+        </div>
+        <div class="row">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="8" width="16" height="10" rx="2"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg>
+          <div><h5>Car &amp; valet parking</h5><p>Space and staff for your guests' vehicles.</p></div>
+        </div>
+        <div class="row">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l9 18H3z" stroke-linejoin="round"/><path d="M12 10v4"/><circle cx="12" cy="17" r=".5" fill="currentColor"/></svg>
+          <div><h5>Power amp &amp; 100% backup</h5><p>The music keeps playing, even if the grid doesn't.</p></div>
+        </div>
+        <div class="row">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 10h18v8H3zM9 6h6v4H9z" stroke-linejoin="round"/><path d="M6 14h.01M9 14h.01M12 14h.01M15 14h.01"/></svg>
+          <div><h5>Pantry &amp; hot plates</h5><p>Warm and serve food the moment your guests arrive.</p></div>
+        </div>
+        <div class="row">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l7 3v6c0 4-3 6.5-7 9-4-2.5-7-5-7-9V6z" stroke-linejoin="round"/></svg>
+          <div><h5>Decorators &amp; guest room</h5><p>Empanelled stage and hall decorators, plus an optional guest room.</p></div>
+        </div>
+        <div class="row">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v18M3 12h18" stroke-linecap="round"/></svg>
+          <div><h5>Exclusive kitchen</h5><p>A fully equipped kitchen to prep everything in-house.</p></div>
+        </div>
+      </div>
+      <div class="feat-side reveal">
+        <h4>One roof for every reason to gather</h4>
+        <p>From the engagement dinner to the wedding itself, from a birthday to a corporate evening — the mahal hosts them all.</p>
+        <div class="events">
+          <span>Weddings</span><span>Receptions</span><span>Engagements</span><span>Birthdays</span><span>Pre-marriage</span><span>Family get-togethers</span><span>Corporate events</span>
+        </div>
+        <div class="feat-img sheen">
+          <img src="img/kitchen.jpg" alt="Exclusive kitchen at Hyath Mahal" loading="lazy">
+          <span class="lbl">the kitchen</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE GALLERIES ============ -->
+<section id="gallery" class="pad">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">The Galleries</span>
+      <h3>Evenings that became memories</h3>
+    </div>
+    <div class="gal reveal">
+      <div class="g sheen"><img src="img/g06.jpg" alt="Event at Hyath Mahal" loading="lazy"></div>
+      <div class="g sheen"><img src="img/g07.jpg" alt="Event at Hyath Mahal" loading="lazy"></div>
+      <div class="g sheen"><img src="img/g08.jpg" alt="Event at Hyath Mahal" loading="lazy"></div>
+      <div class="g sheen"><img src="img/g09.jpg" alt="Event at Hyath Mahal" loading="lazy"></div>
+      <div class="g sheen"><img src="img/g10.jpg" alt="Event at Hyath Mahal" loading="lazy"></div>
+      <div class="g sheen"><img src="img/g11.jpg" alt="Event at Hyath Mahal" loading="lazy"></div>
+      <div class="g sheen"><img src="img/g12.jpg" alt="Event at Hyath Mahal" loading="lazy"></div>
+      <div class="g sheen"><img src="img/21.jpg" alt="Hyath Mahal hall" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE LEDGER (booking) ============ -->
+<section id="ledger" class="pad">
+  <div class="wrap">
+    <div class="ledger-card reveal">
+      <span class="eyebrow">The Ledger</span>
+      <h3>Make your dream wedding real</h3>
+      <p class="sub">No destination needed — the palace is right here in your city. Write to us on WhatsApp; dates fill fast in the season.</p>
+      <div class="ledger-cta">
+        <a class="btn wa" href="https://wa.me/917845719696?text=Namaste%20Hyath%20Mahal!%20I%20would%20like%20to%20check%20availability%20for%20my%20function%20date." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Book on WhatsApp
+        </a>
+        <a class="btn ghost" href="tel:+917845719696">Call 78457 19696</a>
+      </div>
+      <div class="ledger-rows">
+        <div class="r"><b>Open daily</b><span>10:30 am – 8 pm</span></div>
+        <div class="r"><b>Booking line</b><span><a href="tel:+916379419270">63794 19270</a></span></div>
+        <div class="r"><b>Email</b><span><a href="mailto:hyathmahalbroadway@gmail.com">hyathmahalbroadway@gmail.com</a></span></div>
+        <div class="r"><b>Plus code</b><span>37XP+4H Chennai</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE GUEST LIST ============ -->
+<section id="guests" class="pad">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">The Guest List</span>
+      <h3>What the city says</h3>
+    </div>
+    <div class="guest-grid">
+      <div class="gcard reveal">
+        <p>Very grand Mahal in a prominent area of Chennai. There is a separate arrangement like a mini mahal for small gatherings. Very clean and neatly maintained. The dining hall is spacious. The owner and staff are polite and supportive. Really worth the money — this place will make your event a memorable one.</p>
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <div class="who"><b>Amjath Ibrahim A S</b><span>· guest of the mahal</span></div>
+      </div>
+      <div class="gcard reveal">
+        <p>Time to celebrate? Choose Hyath Mahal — serving every corner of North Chennai: Royapuram, Mannadi, Purasawalkam, Thiruvotriyur, Egmore, Triplicane, Mint Street, Tondiarpet, Washermanpet, Perambur, Kilpauk, Aminjikarai, Mylapore and more.</p>
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <div class="who"><b>From the owner</b><span>· hyathmahalchennai</span></div>
+      </div>
+      <div class="gcard reveal">
+        <p>Twenty thousand square feet, four floors, fully air-conditioned, seated for a hundred to twelve hundred. Five named halls — Studio, Vivaha, Ballroom, The Royal Palace and the Deck — each ready for its own kind of celebration.</p>
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <div class="who"><b>The house rules</b><span>· what the mahal promises</span></div>
+      </div>
+    </div>
+    <p class="rating-note reveal">Rated <b>4.5 / 5</b> on Google Maps · and counting every wedding season.</p>
+  </div>
+</section>
+
+<!-- ============ THE WAY ============ -->
+<section id="way" class="pad">
+  <div class="wrap">
+    <div class="way-grid">
+      <div class="way-side reveal">
+        <span class="eyebrow">The Way</span>
+        <h3>Right off Prakasam Road</h3>
+        <p>Broadway keeps its secrets well — the mahal is the tall golden-fronted building minutes from the railway station and the metro.</p>
+        <address>
+          Hyath Mahal · No.196, Prakasam Road,<br>
+          Asirvada Puram, George Town, Broadway,<br>
+          Chennai 600108, Tamil Nadu
+        </address>
+        <ul class="landmarks">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Central Railway Station</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Marina Beach</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Parry's Corner</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Mannadi Metro</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>High Court</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>TN Secretariat</li>
+        </ul>
+      </div>
+      <div class="mapwrap reveal">
+        <iframe title="Map to Hyath Mahal, Broadway Chennai" src="https://www.google.com/maps?q=13.0977722,80.2864715&z=16&hl=en&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="mapcap">
+          <span>No.196, Prakasam Road · Broadway · Chennai 600108</span>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=13.0977722,80.2864715" target="_blank" rel="noopener">Get directions →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="carpet"></div>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="nm">HYATH MAHAL</div>
+        <div class="tm" style="margin-top:6px">ஹயாத் மகால் · Banquet &amp; Wedding Hall</div>
+        <p style="margin-top:14px;max-width:36ch">Four floors of air-conditioned palace in the heart of Broadway — for weddings, receptions, engagements and every celebration in between.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/hyathmahalchennai/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@hyathmahallmultipurpose" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.5 7.2a2.8 2.8 0 0 0-2-2C18.8 4.8 12 4.8 12 4.8s-6.8 0-8.5.4a2.8 2.8 0 0 0-2 2A29 29 0 0 0 1 12a29 29 0 0 0 .5 4.8 2.8 2.8 0 0 0 2 2c1.7.4 8.5.4 8.5.4s6.8 0 8.5-.4a2.8 2.8 0 0 0 2-2A29 29 0 0 0 23 12a29 29 0 0 0-.5-4.8zM9.8 15.3V8.7L15.7 12z"/></svg>
+          </a>
+          <a href="https://wa.me/917845719696" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+917845719696">+91 78457 19696</a></li>
+          <li><a href="tel:+916379419270">+91 63794 19270 (bookings)</a></li>
+          <li><a href="mailto:hyathmahalbroadway@gmail.com">hyathmahalbroadway@gmail.com</a></li>
+          <li>Open daily · 10:30 am – 8 pm</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Find us</h4>
+        <ul>
+          <li>No.196, Prakasam Road, Asirvada Puram, George Town, Broadway, Chennai 600108</li>
+          <li><a href="https://www.google.com/maps/dir/?api=1&destination=13.0977722,80.2864715" target="_blank" rel="noopener">Get directions →</a></li>
+          <li>Plus code 37XP+4H · LGBTQ+ friendly</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>Hyath Mahal · ஹயாத் மகால் · Broadway, Chennai</span>
+      <span>© 2026 · All celebrations welcome</span>
+    </div>
+  </div>
+</footer>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="corner" viewBox="0 0 120 120">
+    <path d="M6 74 C6 34 34 6 74 6" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M6 60 V6 H60" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 5"/>
+    <circle cx="6" cy="86" r="2.5" fill="currentColor"/>
+    <circle cx="86" cy="6" r="2.5" fill="currentColor"/>
+    <path d="M18 72 C18 44 44 18 72 18" fill="none" stroke="currentColor" stroke-width="1"/>
+  </symbol>
+  <symbol id="finial" viewBox="0 0 54 54">
+    <path d="M27 4 L33 18 L27 15 L21 18 Z" fill="#D4AF37" stroke="#D4AF37" stroke-width="1"/>
+    <circle cx="27" cy="22" r="4" fill="#D4AF37"/>
+    <path d="M27 28 L33 48 L27 42 L21 48 Z" fill="#D4AF37"/>
+  </symbol>
+</svg>
+
+<script>
+(function(){
+  'use strict';
+
+  /* gate loader */
+  var gate = document.getElementById('gate');
+  var hide = function(){ gate.classList.add('done'); setTimeout(function(){ gate.style.display = 'none'; }, 1300); };
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { gate.style.display = 'none'; }
+  else {
+    var t0 = Date.now();
+    window.addEventListener('load', function(){ setTimeout(hide, Math.max(0, 1700 - (Date.now() - t0))); });
+    setTimeout(hide, 6500);
+  }
+
+  /* cursor */
+  if (window.matchMedia('(pointer:fine)').matches) {
+    var ring = document.getElementById('ring');
+    var dot = document.getElementById('dot');
+    var rx = 0, ry = 0, dx = 0, dy = 0;
+    document.addEventListener('mousemove', function(e){ rx = e.clientX; ry = e.clientY; dot.style.left = rx + 'px'; dot.style.top = ry + 'px'; });
+    (function raf(){ dx += (rx - dx) * .18; dy += (ry - dy) * .18; ring.style.left = dx + 'px'; ring.style.top = dy + 'px'; requestAnimationFrame(raf); })();
+    document.querySelectorAll('a, button, .court, .g').forEach(function(el){
+      el.addEventListener('mouseenter', function(){ document.body.classList.add('hovering'); });
+      el.addEventListener('mouseleave', function(){ document.body.classList.remove('hovering'); });
+    });
+  }
+
+  /* reveal */
+  var io = new IntersectionObserver(function(es){ es.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }); }, { threshold: .12 });
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  /* count-up */
+  function anim(el){
+    var target = parseFloat(el.getAttribute('data-count'));
+    var dec = parseInt(el.getAttribute('data-dec') || '0', 10);
+    var dur = 1300, start = null;
+    function step(ts){ if (!start) start = ts; var p = Math.min((ts - start) / dur, 1); var e = 1 - Math.pow(1 - p, 3); var v = target * e;
+      el.textContent = dec ? v.toFixed(dec) : Math.round(v).toLocaleString('en-IN'); if (p < 1) requestAnimationFrame(step); }
+    requestAnimationFrame(step);
+  }
+  var nio = new IntersectionObserver(function(es){ es.forEach(function(en){ if (en.isIntersecting) { anim(en.target); nio.unobserve(en.target); } }); }, { threshold: .6 });
+  document.querySelectorAll('[data-count]').forEach(function(el){ nio.observe(el); });
+
+  /* live status */
+  var d = new Date();
+  var hr = d.getHours();
+  var open = hr >= 10.5 && hr < 20;
+  var note = document.querySelector('.hero-note');
+  if (note) note.innerHTML = open
+    ? '<span class="dot"></span> Open now · Closes 8 pm · 196 Prakasam Road, Broadway'
+    : '<span class="dot" style="background:#c0392b"></span> Closed now · Opens 10:30 am · 196 Prakasam Road, Broadway';
+})();
+</script>
+</body>
+</html>
